@@ -1,0 +1,93 @@
+<h2 class="sr-only">Форма для введення даних перед формуванням комерційної пропозиції GRILI.UA</h2>
+<form class="elicit">
+  <div class="elicit-header">
+    <svg viewBox="0 0 20 20" fill="currentColor"><path d="M11.586 2a1.5 1.5 0 0 1 1.06.44l2.914 2.914a1.5 1.5 0 0 1 .44 1.06V16.5a1.5 1.5 0 0 1-1.5 1.5h-9a1.5 1.5 0 0 1-1.492-1.347L4 16.5v-13A1.5 1.5 0 0 1 5.5 2zM5.5 3a.5.5 0 0 0-.5.5v13a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h-2.5A1.5 1.5 0 0 1 11 5.5V3zm7.04 10.304a.5.5 0 0 1 .92.392c-.295.69-.871 1.304-1.66 1.304-.487 0-.892-.234-1.2-.574-.309.34-.713.574-1.2.574-.486 0-.892-.233-1.2-.574-.31.34-.714.574-1.2.574a.5.5 0 0 1 0-1c.212 0 .52-.18.74-.696l.034-.067a.5.5 0 0 1 .886.067c.221.516.528.696.74.696.213 0 .52-.18.74-.696l.035-.067a.5.5 0 0 1 .885.067c.22.516.527.696.74.696s.519-.18.74-.696m0-4a.5.5 0 0 1 .92.392c-.295.69-.871 1.304-1.66 1.304-.487 0-.892-.234-1.2-.574-.309.34-.713.574-1.2.574-.486 0-.892-.233-1.2-.574-.31.34-.714.574-1.2.574a.5.5 0 0 1 0-1c.212 0 .52-.18.74-.696l.034-.067a.5.5 0 0 1 .886.067c.221.516.528.696.74.696.213 0 .52-.18.74-.696l.035-.067a.5.5 0 0 1 .885.067c.22.516.527.696.74.696s.519-.18.74-.696M12 5.5a.5.5 0 0 0 .5.5h2.293L12 3.207z"/></svg>
+    <span>Деталі пропозиції</span>
+  </div>
+  <div class="elicit-body">
+    <div class="elicit-group">
+      <label class="elicit-question">Хто замовник?</label>
+      <textarea class="elicit-textarea" data-name="замовник" rows="1" placeholder="Ростислав / ТОВ «Назва»"></textarea>
+    </div>
+    <div class="elicit-group">
+      <label class="elicit-question">Контактний телефон замовника</label>
+      <textarea class="elicit-textarea" data-name="телефон" rows="1" placeholder="(067) 000 00 00"></textarea>
+    </div>
+    <div class="elicit-group">
+      <label class="elicit-question">Де буде монтаж?</label>
+      <textarea class="elicit-textarea" data-name="місце_монтажу" rows="1" placeholder="Київська обл., с. Гатне, вул. Садова, 12"></textarea>
+    </div>
+    <div class="elicit-group">
+      <label class="elicit-question">Який тип роботи?</label>
+      <div class="elicit-pills" data-name="тип_роботи" data-multi="false">
+        <button type="button" class="elicit-pill" data-value="Гриль зона" style="border-radius:12px; padding:14px 16px; display:flex; gap:12px; align-items:flex-start; text-align:left; min-width:180px; box-shadow:0 1px 2px rgba(0,0,0,0.04)">
+          <i class="ti ti-flame" style="font-size:20px" aria-hidden="true"></i>
+          <span><span style="font-size:13px; font-weight:500">Гриль зона</span><br><span style="font-size:11px; color:var(--text-muted)">Будівництво з обладнанням</span></span>
+        </button>
+        <button type="button" class="elicit-pill" data-value="Вироби з нержавіючої сталі" style="border-radius:12px; padding:14px 16px; display:flex; gap:12px; align-items:flex-start; text-align:left; min-width:180px; box-shadow:0 1px 2px rgba(0,0,0,0.04)">
+          <i class="ti ti-tools" style="font-size:20px" aria-hidden="true"></i>
+          <span><span style="font-size:13px; font-weight:500">Нержавійка</span><br><span style="font-size:11px; color:var(--text-muted)">Виготовлення виробів</span></span>
+        </button>
+        <button type="button" class="elicit-pill" data-value="Витяжна система" style="border-radius:12px; padding:14px 16px; display:flex; gap:12px; align-items:flex-start; text-align:left; min-width:180px; box-shadow:0 1px 2px rgba(0,0,0,0.04)">
+          <i class="ti ti-wind" style="font-size:20px" aria-hidden="true"></i>
+          <span><span style="font-size:13px; font-weight:500">Витяжна система</span><br><span style="font-size:11px; color:var(--text-muted)">Будівництво витяжки</span></span>
+        </button>
+        <button type="button" class="elicit-pill" data-value="Інше" data-other>Інше</button>
+      </div>
+      <input type="text" class="elicit-other" data-for="тип_роботи" placeholder="Як назвати роботу в документі" hidden>
+    </div>
+    <div class="elicit-group">
+      <label class="elicit-question">Дата подачі (якщо не сьогодні)</label>
+      <input type="date" class="elicit-date" data-name="дата_подачі">
+    </div>
+    <div class="elicit-group">
+      <label class="elicit-question">Позиції «Основа / конструкція»: назва — ціна — кількість</label>
+      <textarea class="elicit-textarea" data-name="основа_конструкція" placeholder="Каркас з декоративного бетону — 185 000 — 1&#10;Стільниця з кварциту — 12 500 — 4,9"></textarea>
+    </div>
+    <div class="elicit-group">
+      <label class="elicit-question">Позиції «Обладнання»: модель — ціна — кількість</label>
+      <textarea class="elicit-textarea" data-name="обладнання" placeholder="Napoleon Prestige PRO 825 — 210 000 — 1&#10;Мийка GRILLI 777792 — 9 800 — 1"></textarea>
+    </div>
+    <div class="elicit-group">
+      <label class="elicit-question">Позиції «Монтажні та логістичні витрати»: назва — ціна — кількість</label>
+      <textarea class="elicit-textarea" data-name="монтаж_логістика" placeholder="Монтаж — 25 000 — 1&#10;Доставка — 3 500 — 1"></textarea>
+    </div>
+    <div class="elicit-group">
+      <label class="elicit-question">Або прикріпіть скріншот чи чернетку з переліком</label>
+      <div class="elicit-files" data-name="чернетка">
+        <label class="elicit-dropzone">
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M16.5 13a.5.5 0 0 1 .5.5v2a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 3 15.5v-2a.5.5 0 0 1 1 0v2a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 1 .5-.5M10 3a.5.5 0 0 1 .374.168l4 4.5.059.082a.5.5 0 0 1-.732.65l-.075-.068L10.5 4.814V13.5a.5.5 0 0 1-1 0V4.814L6.374 8.332a.5.5 0 0 1-.748-.664l4-4.5.08-.071A.5.5 0 0 1 10 3"/></svg>
+          <span>Обрати файл</span>
+          <input type="file" multiple>
+        </label>
+      </div>
+    </div>
+    <div class="elicit-group">
+      <label class="elicit-question">Чи погоджено знижку із замовником?</label>
+      <div class="elicit-pills" data-name="знижка" data-multi="false">
+        <button type="button" class="elicit-pill" data-value="Ні">Ні</button>
+        <button type="button" class="elicit-pill" data-value="Так" data-other>Так</button>
+      </div>
+      <input type="text" class="elicit-other" data-for="знижка" placeholder="На які позиції і скільки: 10% на гриль" hidden>
+    </div>
+    <div class="elicit-group">
+      <label class="elicit-question">Потрібна титульна сторінка?</label>
+      <div class="elicit-pills" data-name="титульна" data-multi="false">
+        <button type="button" class="elicit-pill" data-value="Ні">Ні</button>
+        <button type="button" class="elicit-pill" data-value="Так">Так</button>
+      </div>
+    </div>
+    <div class="elicit-group">
+      <label class="elicit-question">Що змінити в умовах? (термін, передоплата, додати чи прибрати пункт)</label>
+      <textarea class="elicit-textarea" data-name="зміни_умов" placeholder="Термін виконання 30–40 робочих днів; передоплата 70%"></textarea>
+    </div>
+    <div class="elicit-group">
+      <label class="elicit-question">Інші примітки для мене</label>
+      <textarea class="elicit-textarea" data-name="примітки" placeholder="Замовник просив окремо виділити доставку"></textarea>
+    </div>
+  </div>
+  <div class="elicit-footer">
+    <button type="button" class="elicit-skip">Пропустити</button>
+    <button type="button" class="elicit-submit">Сформувати</button>
+  </div>
+</form>
